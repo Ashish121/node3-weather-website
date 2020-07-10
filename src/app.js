@@ -5,6 +5,7 @@ const hbs = require('hbs');
 
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
+const port = process.env.PORT || 8080 ;
 
 console.log(__dirname);
 console.log(__filename);
@@ -98,7 +99,7 @@ app.get('*', (req, res)=> {
         commonTitle:"Node Js tutorial"
     })
 })
-app.listen('8080',() => {
-    console.log('Serve is up and running on post 8080');
+app.listen(port,() => {
+    console.log('Serve is up and running on post ', port);
     
 })
