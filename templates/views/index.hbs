@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Welcome Page</title>
+    <link rel="icon" href="/img/weather.png">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="main-content">
+        {{>header}}
+        <h4>{{title}}</h4>
+        <form>
+            <input placeholder="Location" style="height: 24px;
+    border: 1px solid #cccccc;
+    width: 200px;" />
+            <button style="height: 29px;
+    width: 80px;
+    cursor: pointer;
+    background-color: cadetblue;
+    color: white;
+    border: none;">Search</button>
+
+        </form>
+        <div style="padding-top:10px">
+            <span id="loader">Loading...</span>
+            <label for="error" style="color:red"><span id="errorField"></span></label>
+            <div id="data_wrapper">
+                <label>Location : </label><span id="locationField"></span><br>
+                <label>Address : </label><span id="addressField"></span>
+            </div>
+        </div>
+    </div>
+
+
+    {{>footer}}
+    <script src="/js/app.js"></script>
+
+</body>
+
+</html>
